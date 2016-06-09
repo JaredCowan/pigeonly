@@ -1,0 +1,139 @@
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #eee;
+}
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: inherit;
+}
+
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.form {
+  @extend .col-md-6;
+}
+
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+.navbar-inverse {
+  background-color: #3b5998;
+  .navbar-brand {
+    color: #fff;
+    &:focus, &:hover {
+      background-color: darken(#3b5998, 6);
+    }
+  }
+}
+main {
+  @extend .container;
+  margin-top: 51px;
+  max-width: 700px;
+  padding-bottom: 80px;
+  width: 100%;
+  .form {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fafafa;
+    border: 1px solid #dfe0e4;
+    > .post {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      textarea {
+        resize: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+      > .form-group {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        > .avatar,
+        > .field {
+          display: flex;
+        }
+        > .avatar {
+          > img {
+            height: 50px;
+          }
+        }
+        > .field {
+          flex-grow: 1;
+        }
+      }
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 6px;
+        border-top: 1px solid #cbcbcb;
+        .btn {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  > .results {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    padding: 15px;
+    background-color: #fafafa;
+    border: 1px solid #dfe0e4;
+    > .content {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row;
+      > .avatar,
+      > .field {
+        display: flex;
+      }
+      > .avatar {
+        > img {
+          height: 50px;
+        }
+      }
+      > .field {
+        flex-direction: column;
+        flex-grow: 1;
+        padding-left: 15px;
+        > .meta {
+          margin-bottom: 20px;
+          > .data {
+            font-size: 80%;
+            color: #ab949c;
+          }
+        }
+        > ul {
+          padding: 0;
+          list-style: none;
+        }
+      }
+    }
+  }
+}

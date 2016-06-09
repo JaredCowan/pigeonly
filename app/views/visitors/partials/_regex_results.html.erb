@@ -1,11 +1,31 @@
-<div id="regex-results">
+<div id="regex-results" class="results <%= @body.nil? ? 'hide' : 'shown'; %>">
   <% if @body %>
-      <ul>
-        <% @body.each do |f| %>
-          <li>
-            <%= number_to_phone(f, area_code: true) %>
-          </li>
-        <% end %>
-      </ul>
+      <div class="content">
+        <div class="avatar">
+          <img src="http://placehold.it/50?text=Avatar" alt="avatar">
+        </div>
+
+        <div class="field">
+          <div class="meta">
+            <a href="#">
+              John Doe
+            </a>
+            <div class="data">
+              1 min &middot; Las Vegas, NV
+            </div>
+          </div>
+
+          <ul>
+            <% @body.each do |f| %>
+                <li>
+                  <i class="fa fa-phone"></i>&nbsp;
+                  <a href="tel: <%= number_to_phone(f, area_code: true) %>" data-toggle="tooltip" data-placement="top" title="Call <%= number_to_phone(f, area_code: true) %>">
+                    <%= number_to_phone(f, area_code: true) %>
+                  </a>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
   <% end %>
 </div>

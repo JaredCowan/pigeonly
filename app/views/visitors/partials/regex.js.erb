@@ -1,2 +1,6 @@
 var $results = $('#regex-results');
-$results.html('<%= escape_javascript(render partial: 'visitors/partials/regex_results') %>');
+
+$results.replaceWith('<%= escape_javascript(render partial: 'visitors/partials/regex_results') %>');
+
+// Init tooltips
+$('[data-toggle="tooltip"]').tooltip();

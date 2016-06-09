@@ -1,12 +1,18 @@
-<h3>
-  Enter some text:
-</h3>
+<section class="form">
+  <%= simple_form_for('post', remote: true) do |f| %>
 
-<%= simple_form_for('post', remote: true) do |f| %>
+      <div class="form-group">
+        <div class="avatar">
+          <img src="http://placehold.it/50?text=Avatar" alt="avatar">
+        </div>
 
-    <div class="form-group">
-      <%= f.text_area :body, rows: '5', class: 'form-control', placeholder: "Enter some phone numbers and text &hellip;".html_safe, required: true %>
-    </div>
+        <div class="field">
+          <%= f.text_area :body, rows: '5', class: 'form-control', placeholder: "What's on your mind?".html_safe, required: true %>
+        </div>
+      </div>
 
-    <%= f.submit 'Parse Phone Numbers', class: 'btn btn-primary' %>
-<% end %>
+      <div class="actions">
+        <%= f.submit 'Post', class: 'btn btn-primary' %>
+      </div>
+  <% end %>
+</section>
