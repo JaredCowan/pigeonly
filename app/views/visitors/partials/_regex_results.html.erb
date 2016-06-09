@@ -1,0 +1,11 @@
+<div id="regex-results">
+  <% if @body %>
+      <ul>
+        <% @body.each do |f| %>
+          <li>
+            <%= number_to_phone(f, area_code: true) %>
+          </li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>

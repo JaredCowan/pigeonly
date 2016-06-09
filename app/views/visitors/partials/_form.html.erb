@@ -1,0 +1,12 @@
+<h3>
+  Enter some text:
+</h3>
+
+<%= simple_form_for('post', remote: true) do |f| %>
+
+    <div class="form-group">
+      <%= f.text_area :body, rows: '5', class: 'form-control', placeholder: "Enter some phone numbers and text &hellip;".html_safe, required: true %>
+    </div>
+
+    <%= f.submit 'Parse Phone Numbers', class: 'btn btn-primary' %>
+<% end %>
