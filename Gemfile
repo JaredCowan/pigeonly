@@ -6,12 +6,15 @@ gem 'rails', '4.2.5'
 
 gem 'pg'
 gem 'puma'
+gem 'simple_form'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'autoprefixer-rails'
+gem 'js-routes'
 
 group :development, :test do
   gem 'byebug'
@@ -27,6 +30,7 @@ gem 'high_voltage'
 
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
