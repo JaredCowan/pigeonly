@@ -15,6 +15,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'autoprefixer-rails'
 gem 'js-routes'
+gem 'ffaker'
 
 group :development, :test do
   gem 'byebug'
@@ -38,7 +39,6 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'ffaker'
   gem 'rspec-rails'
 end
 
